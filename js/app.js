@@ -135,6 +135,7 @@ function chooseWish(wish) {
   wishPanel.style.display = "none";
 
   hideBaseWorldObjects();
+
   setVisible(platformBorders, false);
 
   genie.setAttribute("visible", false);
