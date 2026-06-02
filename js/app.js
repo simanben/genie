@@ -22,7 +22,6 @@ const genie = document.querySelector("#genie");
 const worldTitle = document.querySelector("#worldTitle");
 const worldInstruction = document.querySelector("#worldInstruction");
 
-const baseWorldObjects = document.querySelectorAll(".base-world");
 const moneyWorldObjects = document.querySelectorAll(".money-world");
 const loveWorldObjects = document.querySelectorAll(".love-world");
 const adventureWorldObjects = document.querySelectorAll(".adventure-world");
@@ -125,21 +124,33 @@ function hideAllWishWorlds() {
 }
 
 function hideBaseWorldObjects() {
-  setVisible(baseWorldObjects, false);
+  const baseObjects = document.querySelectorAll(".base-world");
+
+  baseObjects.forEach(function (element) {
+    element.setAttribute("visible", false);
+  });
 
   lamp.setAttribute("visible", false);
   lampAura.setAttribute("visible", false);
+  genie.setAttribute("visible", false);
+}
+
+function showBaseWorldObjects() {
+  const baseObjects = document.querySelectorAll(".base-world");
+
+  baseObjects.forEach(function (element) {
+    element.setAttribute("visible", true);
+  });
+
+  lamp.setAttribute("visible", true);
+  lampAura.setAttribute("visible", true);
 }
 
 function chooseWish(wish) {
   wishPanel.style.display = "none";
 
   hideBaseWorldObjects();
-
   setVisible(platformBorders, false);
-
-  genie.setAttribute("visible", false);
-
   hideAllWishWorlds();
 
   if (wish === "money") {
@@ -162,10 +173,10 @@ function openMoneyWorld() {
 
   scene.setAttribute(
     "fog",
-    "type: exponential; color: #dfd7cd; density: 0.01"
+    "type: exponential; color: #2B1A05; density: 0.01"
   );
 
-  platform.setAttribute("color", "#ece8e0");
+  platform.setAttribute("color", "#6B4E16");
 
   worldTitle.setAttribute("value", "Wereld van Rijkdom");
   worldTitle.setAttribute("color", "#FFF3B0");
@@ -284,12 +295,9 @@ function resetWorld() {
 
   player.setAttribute("position", "0 1.6 8");
 
-  setVisible(baseWorldObjects, true);
+  showBaseWorldObjects();
   hideAllWishWorlds();
 
-  lamp.setAttribute("visible", true);
-
-  lampAura.setAttribute("visible", true);
   lampAura.setAttribute("color", "#FFD166");
 
   lampAura.setAttribute(
