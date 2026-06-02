@@ -134,101 +134,104 @@
       align="center">
     </a-text>
 
-    <!-- STARTWERELD OBJECTEN -->
-    <a-gltf-model
-      class="base-world"
-      id="magicCarpet"
-      src="#carpetModel"
-      position="0 0.03 -5"
-      rotation="0 0 0"
-      scale="0.55 0.55 0.55">
-    </a-gltf-model>
+    <!-- STARTWERELD GROEP -->
+    <a-entity id="baseWorldGroup" visible="true">
 
-    <a-gltf-model
-      class="base-world"
-      id="magicPortal"
-      src="#portalModel"
-      position="-0.80 -6 -25"
-      rotation="0 0 0"
-      scale="20 20 20">
-    </a-gltf-model>
+      <a-gltf-model
+        class="base-world"
+        id="magicCarpet"
+        src="#carpetModel"
+        position="0 0.03 -5"
+        rotation="0 0 0"
+        scale="0.55 0.55 0.55">
+      </a-gltf-model>
 
-    <a-gltf-model
-      class="base-world"
-      id="crystalLeft"
-      src="#crystalModel"
-      position="-6 0 -7"
-      rotation="0 25 0"
-      scale="0.12 0.12 0.12">
-    </a-gltf-model>
+      <a-gltf-model
+        class="base-world"
+        id="magicPortal"
+        src="#portalModel"
+        position="-0.80 -6 -25"
+        rotation="0 0 0"
+        scale="20 20 20">
+      </a-gltf-model>
 
-    <a-gltf-model
-      class="base-world"
-      id="crystalRight"
-      src="#crystalModel"
-      position="6 0 -7"
-      rotation="0 -25 0"
-      scale="0.12 0.12 0.12">
-    </a-gltf-model>
+      <a-gltf-model
+        class="base-world"
+        id="crystalLeft"
+        src="#crystalModel"
+        position="-6 0 -7"
+        rotation="0 25 0"
+        scale="0.12 0.12 0.12">
+      </a-gltf-model>
 
-    <a-gltf-model
-      class="base-world"
-      id="witchStuffLeft"
-      src="#witchStuffModel"
-      position="-3 0.08 -3"
-      rotation="0 35 0"
-      scale="15 15 15">
-    </a-gltf-model>
+      <a-gltf-model
+        class="base-world"
+        id="crystalRight"
+        src="#crystalModel"
+        position="6 0 -7"
+        rotation="0 -25 0"
+        scale="0.12 0.12 0.12">
+      </a-gltf-model>
 
-    <a-gltf-model
-      class="base-world"
-      id="witchStuffRight"
-      src="#witchStuffModel"
-      position="3 0.08 -3"
-      rotation="0 -35 0"
-      scale="15 15 15">
-    </a-gltf-model>
+      <a-gltf-model
+        class="base-world"
+        id="witchStuffLeft"
+        src="#witchStuffModel"
+        position="-3 0.08 -3"
+        rotation="0 35 0"
+        scale="15 15 15">
+      </a-gltf-model>
 
-    <a-gltf-model
-      class="base-world"
-      id="candlesLeft"
-      src="#candlesModel"
-      position="-5 0 -4"
-      rotation="0 35 0"
-      scale="0.018 0.018 0.018">
-    </a-gltf-model>
+      <a-gltf-model
+        class="base-world"
+        id="witchStuffRight"
+        src="#witchStuffModel"
+        position="3 0.08 -3"
+        rotation="0 -35 0"
+        scale="15 15 15">
+      </a-gltf-model>
 
-    <a-gltf-model
-      class="base-world"
-      id="candlesRight"
-      src="#candlesModel"
-      position="5 0 -4"
-      rotation="0 -35 0"
-      scale="0.018 0.018 0.018">
-    </a-gltf-model>
+      <a-gltf-model
+        class="base-world"
+        id="candlesLeft"
+        src="#candlesModel"
+        position="-5 0 -4"
+        rotation="0 35 0"
+        scale="0.018 0.018 0.018">
+      </a-gltf-model>
 
-    <!-- LAMP -->
-    <a-gltf-model
-      id="lamp"
-      class="base-world clickable"
-      src="#lampModel"
-      position="0 0.12 -5"
-      rotation="0 90 0"
-      scale="0.025 0.025 0.025"
-      animation="property: position; to: 0 0.22 -5; dir: alternate; dur: 1500; loop: true">
-    </a-gltf-model>
+      <a-gltf-model
+        class="base-world"
+        id="candlesRight"
+        src="#candlesModel"
+        position="5 0 -4"
+        rotation="0 -35 0"
+        scale="0.018 0.018 0.018">
+      </a-gltf-model>
 
-    <a-torus
-      id="lampAura"
-      class="base-world"
-      position="0 0.06 -5"
-      rotation="90 0 0"
-      radius="1.15"
-      radius-tubular="0.035"
-      color="#FFD166"
-      opacity="0.85"
-      animation="property: scale; to: 1.25 1.25 1.25; dir: alternate; dur: 1200; loop: true">
-    </a-torus>
+      <a-gltf-model
+        id="lamp"
+        class="base-world clickable"
+        src="#lampModel"
+        position="0 0.12 -5"
+        rotation="0 90 0"
+        scale="0.025 0.025 0.025"
+        animation="property: position; to: 0 0.22 -5; dir: alternate; dur: 1500; loop: true">
+      </a-gltf-model>
+
+      <a-torus
+        id="lampAura"
+        class="base-world"
+        position="0 0.06 -5"
+        rotation="90 0 0"
+        radius="1.15"
+        radius-tubular="0.035"
+        color="#FFD166"
+        opacity="0.85"
+        animation="property: scale; to: 1.25 1.25 1.25; dir: alternate; dur: 1200; loop: true">
+      </a-torus>
+
+    </a-entity>
 
     <!-- GENIE -->
     <a-gltf-model
@@ -486,7 +489,6 @@
       align="center">
     </a-text>
 
-    <!-- CAMERA / SPELER -->
     <a-entity
       id="player"
       position="0 1.6 8"
@@ -499,8 +501,6 @@
 
   </a-scene>
 
-<script src="js/app.js?v=2"></script>
-
+  <script src="js/app.js?v=30"></script>
 </body>
-
 </html>

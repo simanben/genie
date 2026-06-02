@@ -14,6 +14,8 @@ const platform = document.querySelector("#platform");
 const platformBorders = document.querySelectorAll(".platform-border");
 const player = document.querySelector("#player");
 
+const baseWorldGroup = document.querySelector("#baseWorldGroup");
+
 const lamp = document.querySelector("#lamp");
 const lampAura = document.querySelector("#lampAura");
 const lampLight = document.querySelector("#lampLight");
@@ -124,26 +126,12 @@ function hideAllWishWorlds() {
 }
 
 function hideBaseWorldObjects() {
-  const baseObjects = document.querySelectorAll(".base-world");
-
-  baseObjects.forEach(function (element) {
-    element.setAttribute("visible", false);
-  });
-
-  lamp.setAttribute("visible", false);
-  lampAura.setAttribute("visible", false);
+  baseWorldGroup.setAttribute("visible", false);
   genie.setAttribute("visible", false);
 }
 
 function showBaseWorldObjects() {
-  const baseObjects = document.querySelectorAll(".base-world");
-
-  baseObjects.forEach(function (element) {
-    element.setAttribute("visible", true);
-  });
-
-  lamp.setAttribute("visible", true);
-  lampAura.setAttribute("visible", true);
+  baseWorldGroup.setAttribute("visible", true);
 }
 
 function chooseWish(wish) {
